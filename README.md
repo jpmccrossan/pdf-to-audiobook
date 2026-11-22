@@ -14,7 +14,7 @@ You need **Python 3.10, 3.11 or 3.12** (Kokoro doesn't support 3.13 yet). The qu
 
 ```bash
 sudo apt install python3 python3-venv python3-tk git
-git clone https://github.com/<your-username>/pdf-to-audiobook.git
+git clone https://github.com/jpmccrossan/pdf-to-audiobook.git
 cd pdf-to-audiobook
 ./run.sh
 ```
@@ -25,7 +25,7 @@ NVIDIA GPU: no extra steps needed. The standard Linux PyTorch build includes CUD
 
 ```bash
 brew install python@3.12 python-tk@3.12 git
-git clone https://github.com/<your-username>/pdf-to-audiobook.git
+git clone https://github.com/jpmccrossan/pdf-to-audiobook.git
 cd pdf-to-audiobook
 ./run.sh
 ```
@@ -39,7 +39,7 @@ On M-series Macs the Apple GPU (MPS) is used automatically.
 3. In a terminal:
 
 ```bat
-git clone https://github.com/<your-username>/pdf-to-audiobook.git
+git clone https://github.com/jpmccrossan/pdf-to-audiobook.git
 cd pdf-to-audiobook
 run.bat
 ```
@@ -112,3 +112,7 @@ run.bat         quick start for Windows
 - **espeak errors**: Kokoro ships its own espeak-ng, but if you still get phonemizer errors, install it system-wide (`sudo apt install espeak-ng` / `brew install espeak-ng`).
 - **Start fresh**: delete the `venv` folder and run the quick-start script again.
 - **Different CUDA version on Windows**: set `TORCH_INDEX_URL` before running, e.g. `set TORCH_INDEX_URL=https://download.pytorch.org/whl/cu126`.
+
+## License
+
+MIT, see [LICENSE](LICENSE). Kokoro model weights are Apache 2.0.
