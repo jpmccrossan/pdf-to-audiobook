@@ -1,6 +1,7 @@
 """Command-line entry point. With no PDF given, opens the desktop app."""
 
 import argparse
+import os
 import sys
 
 from .config import DEFAULT_SPEED, DEFAULT_VOICE, SPEED_MAX, SPEED_MIN, VOICES
@@ -36,6 +37,9 @@ def main(argv=None) -> int:
         run()
         return 0
 
+    if not os.path.isfile(args.pdf):
+        print(f"error: file not found: {args.pdf}", file=sys.stderr)
+        return 2
     if args.voice[:1] not in ("a", "b"):
         print(f"error: unsupported voice '{args.voice}' (English voices start with a or b)",
               file=sys.stderr)
