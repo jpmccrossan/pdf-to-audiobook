@@ -1,0 +1,6 @@
+kokoro>=0.9.4
+pdfplumber>=0.11.0
+soundfile>=0.12.1
+numpy
+# torch is pulled in by kokoro. On Windows with an NVIDIA GPU, run.bat installs
+# the CUDA build first; see README for doing it manually.
